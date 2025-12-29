@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f6f6;
+  --bg-elevated: #ffffff;
+
+  --text-primary: #111b21;
+  --text-secondary: #54656f;
+  --border-color: rgba(17, 27, 33, 0.12);
+
+  --accent-green: #00a884;
+  --accent-green-strong: #008069;
+
+  --message-in: #ffffff;
+  --message-out: #d9fdd3;
+}
+
+/* App sets this attribute based on user preference/system. */
+html[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg-primary: #0b141a;
+  --bg-secondary: #111b21;
+  --bg-elevated: #0f1a20;
+
+  --text-primary: #e9edef;
+  --text-secondary: #8696a0;
+  --border-color: rgba(233, 237, 239, 0.12);
+
+  --accent-green: #00a884;
+  --accent-green-strong: #00c298;
+
+  --message-in: #1f2c34;
+  --message-out: #005c4b;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Nice defaults for clickable UI */
+button {
+  font: inherit;
+}
+
+/* Avoid layout jumps when scrollbars appear */
+html {
+  scrollbar-gutter: stable;
+}
